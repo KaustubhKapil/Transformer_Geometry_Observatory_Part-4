@@ -1,0 +1,49 @@
+
+seed: 1337
+device: cuda
+output_dir: results_tgo_iv
+
+data:
+  train_dir: ""
+  val_dir: ""
+  class_subset_file: null
+  image_size: 224
+  num_workers: 8
+  pin_memory: true
+  analysis_set_size: 1000
+  analysis_seed: 2025
+  trajectory_image_index: 0
+  topology_image_index: 0
+
+model:
+  name: vit_small_patch16_224
+  pretrained: true
+  num_classes: 100
+  drop_rate: 0.0
+  drop_path_rate: 0.1
+
+train:
+  epochs: 100
+  batch_size: 32
+  lr: 0.001
+  min_lr: 0.000001
+  weight_decay: 0.05
+  opt: adamw
+  momentum: 0.9
+  label_smoothing: 0.1
+  clip_grad: 1.0
+  amp: true
+
+analysis:
+  snapshot_epochs: [1, 5, 10, 20, 50, 100]
+  topology_maxdim: 2
+  jacobian_ridge: 0.000001
+  jacobian_heterogeneity_size: 32
+  topology_eps_grid: 64
+  plot_layers: [0, 3, 6, 9, 12]
+  save_raw_diagrams: true
+  save_raw_jacobians: false
+
+checkpoint:
+  save_best: true
+  save_last: true
