@@ -68,6 +68,8 @@ TGO-IV studies the representation point cloud through several topological observ
 * **Persistence Landscapes**
 * **Bottleneck Distance**
 * **Wasserstein Distance**
+* **Trajectory Length, Curvature and Velocity**
+* **Jacobian Persistence and Homogeneity**
 
 The primary homology dimensions examined are
 
