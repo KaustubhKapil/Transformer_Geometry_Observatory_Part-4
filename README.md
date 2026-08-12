@@ -92,9 +92,7 @@ For consecutive layers $l$ and $l+1$, the topological difference is quantified u
 The Bottleneck Distance is defined as
 
 $$
-d_B(D_1,D_2)
-
-\inf_{\gamma}
+d_B(D_1,D_2)\inf_{\gamma}
 \sup_{x \in D_1}
 |x-\gamma(x)|_\infty.
 $$
