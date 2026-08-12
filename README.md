@@ -93,7 +93,6 @@ The Bottleneck Distance is defined as
 
 $$
 d_B(D_1,D_2)
-============
 
 \inf_{\gamma}
 \sup_{x \in D_1}
